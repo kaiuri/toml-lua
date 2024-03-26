@@ -6,7 +6,7 @@ TOML encoding and decoding for LuaJIT through Rust's `serde` and `toml` crates.
 
 ## Installation
 
-For the moment, clone the repo, run `bash build` from the root, grab `./lua/toml.so` and put somewhere in your `package.path`.
+For the moment, clone the repo, run `bash build` from the root, grab `toml.so` and put it somewhere in your `package.path`.
 
 ## Usage
 
