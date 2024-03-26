@@ -1,29 +1,18 @@
 # toml-lua (WIP)
 
-> Note: For the moment this is for usage from within Neovim only.
+> LuaJIT only, for now.
 
 TOML encoding and decoding for LuaJIT through Rust's `serde` and `toml` crates.
 
 ## Installation
 
-### Neovim
-
-- `lazy.nvim`:
-
-```lua
-{
-  [1] = 'kaiuri/toml-lua',
-  build = 'bash build'
-  lazy = false -- ??
-}
-```
-
-### Elsewhere
-
-For the moment, clone the repo, run `bash build` from the root and grab
-`./lua/toml.so` and put somewhere in your `package.path`.
+For the moment, clone the repo, run `bash build` from the root, grab `./lua/toml.so` and put somewhere in your `package.path`.
 
 ## Usage
+
+### Encode
+
+Returns `userdata` on error.
 
 ```lua
 local toml = require('toml')
@@ -44,8 +33,15 @@ print(toml.encode(data))
 --
 -- [contact]
 -- email = "bahblablabubahbla@blabla.com"
+```
+
+### Decode
+
+Returns `userdata` on error.
+
+```lua
 local decode = toml.decode([[
-age = 42 # aha, nope 😆
+age = 42
 is_cool = true
 likes = ["lua", "toml", "neovim"]
 name = "Toml"
