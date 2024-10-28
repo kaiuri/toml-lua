@@ -4,7 +4,7 @@
 
 --- ## Installation
 --- For the moment, clone the repo, run `make all` and put `toml.so` somewhere
---- on our package.cpath
+--- in your package.cpath
 
 --- Usage
 local inspect = require('inspect')
