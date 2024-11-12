@@ -1,0 +1,2 @@
+- [ ] Validate UTF-8 encoding of string arguments from Lua.
+- [ ] Write tests.

@@ -1,0 +1,17 @@
+[package]
+name = "toml-lua"
+version = "0.1.0"
+authors = ["Uriel Caiado <uriel.aciole@gmail.com>"]
+repository = "https://github.com/kaiuri/toml-lua"
+description = "A TOML to Lua converter, mainly for use from Neovim."
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+mlua = { version = "0.10.1", features = ["luajit", "module", "serialize"] }
+serde = { version = "1.0.215", features = ["derive"] }
+toml = "0.8.19"
+
+[lib]
+crate-type = ["cdylib"]
